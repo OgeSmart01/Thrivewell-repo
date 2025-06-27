@@ -9,22 +9,26 @@
 </head>
 <body>
   <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="images/logo.png" alt="ELAGLOBAL Logo">
-      <!-- <span>ELAGLOBAL</span> -->
-    </div>
-    <nav>
-      <a href="/" class="active">Home</a>
-      <a href="/about.html">About Us</a>
-      <a href="Programs.html">Programs</a>
-      <!-- <div class="dropdown">
-        <a href="#">Pages ▾</a>
-      </div> -->
-      <a href="contact.html">Contact Us</a>
-    </nav>
-    <a href="https://wa.me/2349038263001" class="cta-button">Contact Us</a>
-  </header>
+<header class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="ELAGLOBAL Logo">
+  </div>
+
+  <!-- Hamburger Icon -->
+  <div class="hamburger" id="hamburger">&#9776;</div>
+
+  <!-- Nav Menu -->
+  <nav id="nav-menu">
+    <a href="/" class="active">Home</a>
+    <a href="/about.html">About Us</a>
+    <a href="Programs.html">Programs</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+
+  <!-- CTA Button -->
+  <a href="https://wa.me/2349038263001" class="cta-button">Contact Us</a>
+</header>
+
 
   <!-- Hero Section -->
    
@@ -303,6 +307,13 @@
 
     window.open(url, "_blank");
   }
+
+   const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('show');
+  });
 </script>
 
 </body>
