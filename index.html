@@ -288,33 +288,9 @@
 
 
 
-<script>
-  function sendToWhatsApp() {
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
+<script src="js/main.js" defer></script>
 
-    if (!name || !email || !message) {
-      alert("Please fill out all fields.");
-      return;
-    }
 
-    const phone = "2349038263001"; // Your WhatsApp number WITHOUT "+" and spaces
-    const url = `https://wa.me/${phone}?text=` + 
-      encodeURIComponent(
-        `Hello, my name is ${name}.\nEmail: ${email}\nMessage: ${message}`
-      );
-
-    window.open(url, "_blank");
-  }
-
-   const hamburger = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-
-  hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('show');
-  });
-</script>
 
 </body>
 </html>
