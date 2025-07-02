@@ -1,0 +1,142 @@
+/* === Podcast Section Styling === */
+.podcast-section {
+  background-color: #fdfdfd;
+  padding: 4rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.podcast-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LEFT: Images */
+.podcast-images {
+  flex: 1 1 45%;
+  overflow: hidden;
+  position: relative;
+  height: 120px;
+}
+
+.image-row {
+  display: flex;
+  animation: scrollRow 20s linear infinite;
+  gap: 1rem;
+}
+
+.image-row img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* RIGHT: Text */
+.podcast-text {
+  flex: 1 1 45%;
+}
+
+.podcast-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+.podcast-text p {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.podcast-text .btn {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.podcast-text .btn:hover {
+  background-color: #000;
+}
+
+/* === Animation === */
+@keyframes scrollRow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-60%); }
+}
+
+/* === Responsive Design === */
+@media (max-width: 1024px) {
+  .image-row img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .podcast-text h2 {
+    font-size: 1.75rem;
+  }
+
+  .podcast-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .podcast-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .podcast-images {
+    height: auto;
+  }
+
+  .image-row {
+    animation: scrollRow 15s linear infinite;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .image-row img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .podcast-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .podcast-text p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-row img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .podcast-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .podcast-text p {
+    font-size: 0.9rem;
+  }
+
+  .podcast-text .btn {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+  }
+}
